@@ -1,5 +1,5 @@
 Background (backend):
-  ☐ On initialization, get domain list
+  ✔ On initialization, get domain list @done (2017-11-21 11:07:08)
     ✔ if empty, set initial domain ('medium.com') @done (2017-11-21 01:28:14)
   ☐ listen for message from content script with bookmarklets update
   ☐ on message received, update the sidebar w/ new || deleted bookmarklets
