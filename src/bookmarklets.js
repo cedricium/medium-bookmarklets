@@ -1,30 +1,9 @@
 
 (function () {
-  // let domains = [
-  //   'medium.com',
-  //   'hackernoon.com',
-  //   'medium.freecodecamp.org',
-  //   'engineering.instagram.com'
-  // ];
-
   browser.storage.local.get('domains')
     .then((domainList) => {
       startScript(domainList);
-  });
-
-  // let currentURL = location.href;
-  // let currentHostname = location.hostname;
-
-  // if (!domains.includes(currentHostname))
-  //   return;
-
-  // initialize();
-  // window.setInterval(function() {
-  //   if (currentURL !== location.href) {
-  //     currentURL = location.href;
-  //     location.reload(false);
-  //   }
-  // }, 250);
+  }, onError);
 })();
 
 
