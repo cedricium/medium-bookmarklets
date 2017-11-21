@@ -1,0 +1,18 @@
+.mb__bookmarklet {
+  position: relative;
+  pointer-events: none;
+}
+
+.mb__bookmarklet:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -2rem;
+	
+	background: rgba(240, 128, 128, 0.3);
+	width: 80%;
+	height: 1.25rem;
+
+  cursor: pointer;
+  pointer-events: all;
+}

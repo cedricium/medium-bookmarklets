@@ -1,0 +1,14 @@
+{
+  "name": "medium-bookmarklets",
+  "description": "Makes saving one's place in a Medium article much easier.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Cedric Amaya",
+    "email": "amaya.cedric@gmail.com",
+    "url": "http://cedricamaya.me"
+  },
+  "bugs": {
+    "url": "https://github.com/cedricium/medium-bookmarklets"
+  },
+  "license": ""
+}
