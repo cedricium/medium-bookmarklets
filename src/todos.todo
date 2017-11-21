@@ -1,7 +1,7 @@
 Background (backend):
   ✔ On initialization, get domain list @done (2017-11-21 11:07:08)
     ✔ if empty, set initial domain ('medium.com') @done (2017-11-21 01:28:14)
-  ☐ listen for message from content script with bookmarklets update
+  ✔ listen for message from content script with bookmarklets update @done (2017-11-21 12:18:59)
   ☐ on message received, update the sidebar w/ new || deleted bookmarklets
 
 
@@ -20,15 +20,17 @@ Content (frontend):
     ✘ ensure `<li>`'s are selected and bookmarklet UI is rendered correctly @today @cancelled (2017-11-19 22:28:31)
       ✔ >> moved to 'Known Issues' @done (2017-11-19 22:28:56)
     ✔ update local storage with newly-added bookmarklets @today @done (2017-11-19 22:34:10)
+    ☐ append hash (e.g. '#3hf9') at the end of the url before storing
 
   Removing Bookmarklets:
     ✔ fix onclick event removing selected bookmarklet @high @done (2017-11-19 21:27:51)
     ✔ retrieve selected ('clicked') bookmarklet from storage @done (2017-11-19 21:28:08)
-    ☐ delete bookmarklet and update local storage with new bookmarklets ( >> `browser.storage.local.remove(url)`) @today 
+    ✔ delete bookmarklet and update local storage with new bookmarklets ( >> `browser.storage.local.remove(url)`) @today @done (2017-11-21 12:19:06)
 
   Storing Bookmarklets:
     ✔ update local storage (e.g. `storage.local.set(bookmarklet)`) @done (2017-11-19 20:50:23)
-    ☐ send message to background script stating new changes @today 
+    ✘ send message to background script stating new changes @today @cancelled (2017-11-21 12:19:17)
+      ✔ `onChanged` listener in `background.js` catches changes @done (2017-11-21 12:20:01)
 
   Initializing Bookmarklets:
     ✘ retrieve all bookmarklets for the given url @cancelled (2017-11-19 20:41:21)

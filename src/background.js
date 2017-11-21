@@ -18,3 +18,11 @@
 function onError(err) {
   console.error(err);
 }
+
+
+browser.storage.onChanged.addListener(function (changes, areaName) {
+  console.log(changes);
+
+  // if (!('domains' in changes))
+    // updateSidebar(changes);
+});
