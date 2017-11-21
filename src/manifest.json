@@ -17,8 +17,14 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["bookmarklets.js"],
-      "css": ["styles.css"]
+      "js": ["content/bookmarklets.js"],
+      "css": ["content/styles.css"]
     }
-  ]
+  ],
+
+  "sidebar_action": {
+    "default_title": "Medium Bookmarklets",
+    "default_panel": "sidebar/sidebar.html",
+    "default_icon": "resources/sidebar_icon.png"
+  }
 }
