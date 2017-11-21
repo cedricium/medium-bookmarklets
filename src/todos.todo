@@ -47,4 +47,4 @@ General:
 Known Issues:
   ☐ #1 - `.mb__bookmarklet` on `<li>`'s are rendered weird; also moves bullet point
   ☐ #2 - text with inline image to the left also rendered weird
-  ☐ #3 - Medium does 'soft page loads' so content script is not always run on new page redirect @critical @today 
+  ✔ #3 - Medium does 'soft page loads' so content script is not always run on new page redirect @critical @today @done (2017-11-21 01:35:15)
