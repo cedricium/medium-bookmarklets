@@ -35,6 +35,7 @@ body * {
 }
 
 .heading p.nav {
+  cursor: pointer;
   padding: 0.75rem 1rem 0 0;
   text-align: right;
 }
@@ -77,6 +78,11 @@ body * {
 
 /* Settings View
 ---------------------------------------------------- */
+
+.heading p.nav.settings-nav {
+  text-align: left;
+  padding: 0.75rem 0 0 1rem;
+}
 
 button.button {
   background: #0080ff;
@@ -128,7 +134,7 @@ div.domain-input input.outline.remove {
   display: inline-block;
   color: #7F3142;
   border: solid thin #7F3142;
-  width: 6rem;
+  width: 80px;
 }
 
 div.domain-input input.domain {
@@ -138,9 +144,9 @@ div.domain-input input.domain {
   border-radius: 2px 2px 0 0;
   padding: 7px 4px;
   font-size: 1rem;
-  color: #fff;
+  color: #9baec8;
   display: inline-block;
-  width: calc(100% - 6.5rem);
+  width: calc(100% - 85px);
   outline: 0;
 
   white-space: nowrap;
@@ -149,6 +155,7 @@ div.domain-input input.domain {
 }
 
 div.domain-input input.domain:focus {
+  color: #fff;
   background: #14151b;
   border-bottom-color: #0080ff;
 }
