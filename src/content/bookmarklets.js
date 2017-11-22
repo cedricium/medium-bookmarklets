@@ -44,7 +44,7 @@ function initialize() {
     let url = location.href;
 
     if (url in results) {
-      let bookmarklet = JSON.parse(results[url]);
+      let bookmarklet = results[url];
       displayBookmarklet(bookmarklet.id);
     }
   }, onError);
@@ -61,8 +61,6 @@ function addBookmarklet(){
           url: location.href,
           text: selectionData.text
         };
-
-        console.log('unique bookmarklet added');
 
         storeBookmarklet(bookmarklet);
       }
@@ -90,7 +88,7 @@ function deleteBookmarklet(e) {
 function storeBookmarklet(bookmarkletObj) {
   let url = bookmarkletObj.url;
 
-  let storingBookmarklet = browser.storage.local.set({[url]: [JSON.stringify(bookmarkletObj)]});
+  let storingBookmarklet = browser.storage.local.set({[url]: bookmarkletObj});
   storingBookmarklet.then(() => {
     displayBookmarklet(bookmarkletObj.id);
   }, onError);
