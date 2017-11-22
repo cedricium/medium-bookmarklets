@@ -4,8 +4,6 @@
     console.log(storedDomains);
     if (Object.keys(storedDomains).length === 0) {
       setInitialDomains();
-    } else {
-      testDomains();
     }
   }, onError);
 
