@@ -13,11 +13,16 @@ body * {
   padding: 0 0;
 }
 
+
+
+/* Bookmarklets View
+---------------------------------------------------- */
+
 .container {
   height: calc(100% - 20px);
   width: calc(100% - 20px);
   margin: auto;
-  background: #282C37;
+  background: transparent;
   overflow: auto;
   position: relative;
 }
@@ -44,7 +49,7 @@ body * {
 
 .main-content .card {
   padding: 10px;
-  background: transparent;
+  background: #282C37;
   border-bottom: solid thin #393f4f;
 }
 
@@ -66,4 +71,84 @@ body * {
 
 .main-content .card .url {
   color: #0080ff;
+}
+
+
+
+/* Settings View
+---------------------------------------------------- */
+
+button.button {
+  background: #0080ff;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 10px none;
+  border-radius: 4px;
+  margin: 5px 0;
+  padding: 0 16px;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+}
+
+button.button:hover {
+}
+
+
+input.outline {
+  text-align: center;
+  display: block;
+  background: transparent;
+  color: #0080ff;
+  border: solid thin #0080ff;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 24px;
+  padding: 0 12px;
+  margin: 5px 0;
+}
+
+div.domain-input {
+  width: 100%;
+  position: relative;
+}
+
+div.domain-input:not(:first-of-type) {
+  margin-top: 5px;
+}
+
+div.domain-input input.outline.remove {
+  position: absolute;
+  top: 2px;
+  right: 0;
+
+  display: inline-block;
+  color: #7F3142;
+  border: solid thin #7F3142;
+  width: 6rem;
+}
+
+div.domain-input input.domain {
+  background: transparent;
+  border: none;
+  border-bottom: solid 2px #9baec8;
+  border-radius: 2px 2px 0 0;
+  padding: 7px 4px;
+  font-size: 1rem;
+  color: #fff;
+  display: inline-block;
+  width: calc(100% - 6.5rem);
+  outline: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.domain-input input.domain:focus {
+  background: #14151b;
+  border-bottom-color: #0080ff;
 }
