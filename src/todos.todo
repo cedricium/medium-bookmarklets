@@ -6,9 +6,9 @@ Background (backend):
 
 
 Sidebar:
-  ☐ create UI design for bookmarklets
-  ☐ setup manifest.json to include sidebar permission
-  ☐ render page with bookmarklets (sorted by url)
+  ✔ create UI design for bookmarklets @done (2017-11-22 15:52:57)
+  ✔ setup manifest.json to include sidebar permission @done (2017-11-22 15:53:00)
+  ✔ render page with bookmarklets (sorted by url) @done (2017-11-22 15:53:02)
   ☐ auto-update page on message received from background script
 
 
@@ -20,7 +20,7 @@ Content (frontend):
     ✘ ensure `<li>`'s are selected and bookmarklet UI is rendered correctly @today @cancelled (2017-11-19 22:28:31)
       ✔ >> moved to 'Known Issues' @done (2017-11-19 22:28:56)
     ✔ update local storage with newly-added bookmarklets @today @done (2017-11-19 22:34:10)
-    ☐ append hash (e.g. '#3hf9') at the end of the url before storing
+    ✘ append hash (e.g. '#3hf9') at the end of the url before storing @cancelled (2017-11-22 15:53:58)
 
   Removing Bookmarklets:
     ✔ fix onclick event removing selected bookmarklet @high @done (2017-11-19 21:27:51)
