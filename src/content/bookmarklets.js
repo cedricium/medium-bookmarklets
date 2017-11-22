@@ -56,10 +56,14 @@ function addBookmarklet(){
     let selectionData = getSelectionData();
     if (e.keyCode === 66 && selectionData.text) {
       if (currentBookmarklet !== selectionData.targetElement.id) {
+        let title = document.querySelector('h1.graf--title').textContent;
+        let author = document.querySelector('a[property="cc:attributionName"]').textContent;
+
         let bookmarklet = {
           id: selectionData.targetElement.id,
           url: location.href,
-          text: selectionData.text
+          title: title,
+          author: author
         };
 
         storeBookmarklet(bookmarklet);
@@ -130,7 +134,3 @@ function getSelectionData() {
 
   return selectionInfo;
 }
-
-
-// initialize();
-// addBookmarklet();

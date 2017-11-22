@@ -1,0 +1,69 @@
+html,
+body {
+  margin: 0 0;
+  padding: 0 0;
+  background: #191B22;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+body * {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.container {
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  margin: auto;
+  background: #282C37;
+  overflow: auto;
+  position: relative;
+}
+
+.heading {
+  position: fixed;
+  background: #393F4F;
+  height: 3rem;
+  width: calc(100% - 20px);
+}
+
+.heading p.nav {
+  padding: 0.75rem 1rem 0 0;
+  text-align: right;
+}
+
+.main-content {
+  margin-top: 3rem;
+}
+
+.card-container {
+  cursor: pointer;
+}
+
+.main-content .card {
+  padding: 10px;
+  background: transparent;
+  border-bottom: solid thin #393f4f;
+}
+
+/* media query small screens: .main-content .card *
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+*/
+
+.main-content .card .title {
+  font-size: 1.1rem;
+}
+
+.main-content .card .author::before { content: "- "; }
+
+.main-content .card .author {
+  text-transform: capitalize;
+}
+
+.main-content .card .url {
+  color: #0080ff;
+}
