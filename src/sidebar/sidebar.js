@@ -2,12 +2,16 @@
   let bookmarklets = {};
   let gettingBookmarklets = browser.storage.local.get(null);
   gettingBookmarklets.then((data) => {
+    if (Object.keys(data).length === 1)   // 1 key being the domain object; meaning no bookmarklets
+      emptyStateContainer.classList.remove('hidden');
     for (key in data) {
       if (key !== 'domains')
         createCard(data[key]);
     }
   }, onError);
 })();
+
+let emptyStateContainer = document.querySelector('div.empty-state');
 
 function onError(err) {
   console.error(err);
@@ -52,6 +56,11 @@ function openBookmarklet(url) {
 document.querySelector('p.nav').addEventListener('click', setSettingsView);
 
 function setSettingsView() {
+  emptyStateContainer.classList.add('hidden');
+
+  let navContainer = document.querySelector('div.heading');
+  navContainer.classList.add('settings');
+
   let navbar = document.querySelector('p.nav');
   navbar.textContent = '< Back to Bookmarklets'
   navbar.classList.add('settings-nav');
@@ -67,7 +76,7 @@ function setSettingsView() {
   </small>
   <input type="button" class="outline addDomain" value="+ Add Domain" />
   </div>
-  
+
   <button class="button save">Save</button>
   </div>
   `;
@@ -80,6 +89,7 @@ function setSettingsView() {
 }
 
 function setMainView() {
+  document.querySelector('div.main-content').innerHTML = '';
   location.reload(true);
 }
 
