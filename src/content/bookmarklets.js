@@ -56,7 +56,9 @@ function addBookmarklet(){
     let selectionData = getSelectionData();
     if (e.keyCode === 66 && selectionData.text) {
       if (currentBookmarklet !== selectionData.targetElement.id) {
-        let title = document.querySelector('h1.graf--title').textContent;
+        let title = (document.getElementsByClassName('graf graf--title')[0] !== undefined)
+          ? document.getElementsByClassName('graf graf--title')[0].textContent
+          : document.querySelector('title').textContent;
         let author = document.querySelector('a[property="cc:attributionName"]').textContent;
 
         let bookmarklet = {
