@@ -71,8 +71,8 @@ function setSettingsView() {
   <div class="settings-section domains">
   <p class="settings-section--title">Domains</p>
   <small class="settings-section--desc">
-  Medium publications that do not have the 'medium.com' domain must be added here
-  in order for Medium Bookmarklets to work on them.
+  Publications on Medium that do not have the "medium.com" domain must be added
+  here in order for bookmarklets to work on them.
   </small>
   <input type="button" class="outline addDomain" value="+ Add Domain" />
   </div>
@@ -99,7 +99,7 @@ function addDomainComponent() {
   let domainDiv = document.createElement('div');
   domainDiv.classList.add('domain-input');
   domainDiv.innerHTML = `
-  <input type="text" class="string domain" placeholder="e.g. medium.com" />
+  <input type="text" class="string domain" placeholder="e.g. code.likeagirl.io" />
   <input type="button" class="outline remove" value="✕ Remove" />
   `;
   
