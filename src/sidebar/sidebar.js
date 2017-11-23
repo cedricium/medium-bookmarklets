@@ -62,7 +62,7 @@ function setSettingsView() {
   navContainer.classList.add('settings');
 
   let navbar = document.querySelector('p.nav');
-  navbar.textContent = '< Back to Bookmarklets'
+  navbar.innerHTML = `<span class="icon">&#8592;</span> Back to Bookmarklets`;
   navbar.classList.add('settings-nav');
   
   let mainContentDiv = document.querySelector('div.main-content');

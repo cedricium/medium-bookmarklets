@@ -19,8 +19,8 @@ kbd {
   border: 1px solid #000;
   font-size: 0.7rem;
   font-family: Arial,Helvetica,sans-serif;
-  background-color: #333;
-  color: #cccccc;
+  background-color: #282C37;
+  color: #fff;
   border-radius: 3px;
   display: inline-block;
   margin: 0 0.1em;
@@ -55,6 +55,14 @@ div.heading p.nav {
   cursor: pointer;
   padding: 0.75rem 1rem 0 0;
   display: inline-block;
+}
+
+div.heading p:hover {
+  text-decoration: underline;
+}
+
+div.heading span.icon {
+  font-size: 1.2rem;
 }
 
 .main-content {
