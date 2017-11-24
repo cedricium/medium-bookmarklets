@@ -9,8 +9,6 @@
 
 
 function startScript(domainData) {
-  console.log(domainData);
-
   let domains = domainData.domains;
 
   let currentURL = location.href;
@@ -125,7 +123,6 @@ function getSelectionData() {
   }
 
   if (!targetElement.classList.contains('graf')) {
-    console.log('Please highlight article text only.');
     return;
   }
 
