@@ -30,7 +30,6 @@ kbd {
 
 
 
-
 /* Bookmarklets View
 ---------------------------------------------------- */
 
@@ -49,6 +48,7 @@ div.heading {
   height: 3rem;
   width: calc(100% - 20px);
   text-align: right;
+  z-index: 100;
 }
 
 div.heading p.nav {
@@ -82,12 +82,6 @@ div.heading span.icon {
   background: #282C37;
   border-bottom: solid thin #393f4f;
 }
-
-/* media query small screens: .main-content .card *
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-*/
 
 .main-content .card .title {
   font-size: 1.1rem;
@@ -144,14 +138,10 @@ p.empty-state--title {
 }
 
 p.empty-state--subtitle {
-  margin: 0 8%;
+  margin: 0 0;
+  padding: 0 5px;
   line-height: 1.5rem;
 }
-
-/* media query for smaller sidebar 
-  decrease side margin of the div.empty-state p.subtitle
-*/
-
 
 
 /* Settings View
@@ -257,4 +247,40 @@ div.domain-input input.domain:focus {
   color: #fff;
   background: #14151b;
   border-bottom-color: #0080ff;
+}
+
+
+
+/* Media Queries
+---------------------------------------------------- */
+
+@media screen and (min-width: 200px) {
+  p.empty-state--subtitle {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  div.heading {
+    width: 100%;
+  }
+
+  div.settings-container {
+    padding: 0 5px;
+  }
+
+  .main-content .card .url {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .heading p.nav.settings-nav {
+    padding: 0.75rem 0 0 5px;
+  }
 }
