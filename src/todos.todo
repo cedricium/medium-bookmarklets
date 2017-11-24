@@ -2,14 +2,15 @@ Background (backend):
   ✔ On initialization, get domain list @done (2017-11-21 11:07:08)
     ✔ if empty, set initial domain ('medium.com') @done (2017-11-21 01:28:14)
   ✔ listen for message from content script with bookmarklets update @done (2017-11-21 12:18:59)
-  ☐ on message received, update the sidebar w/ new || deleted bookmarklets
+  ✘ on message received, update the sidebar w/ new || deleted bookmarklets @cancelled (2017-11-23 20:54:47)
+    ✔ >> no messages sent, instead used `storage.onChanged()` @done (2017-11-23 20:55:26)
 
 
 Sidebar:
   ✔ create UI design for bookmarklets @done (2017-11-22 15:52:57)
   ✔ setup manifest.json to include sidebar permission @done (2017-11-22 15:53:00)
   ✔ render page with bookmarklets (sorted by url) @done (2017-11-22 15:53:02)
-  ☐ auto-update page on message received from background script
+  ✔ auto-update page on message received from background script @done (2017-11-23 20:54:38)
 
 
 Content (frontend):
