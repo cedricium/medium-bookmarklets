@@ -219,7 +219,7 @@ div.domain-input input.outline.remove {
   position: absolute;
   top: 2px;
   right: 0;
-
+  padding: 0 0;
   display: inline-block;
   color: #7F3142;
   border: solid thin #7F3142;
