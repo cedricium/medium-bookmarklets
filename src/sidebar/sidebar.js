@@ -114,7 +114,11 @@ function openBookmarklet(url) {
 
 document.querySelector('p.nav').addEventListener('click', setSettingsView);
 function setSettingsView() {
+  let mainContentDiv = document.querySelector('div.main-content');
+  let settingsContentDiv = document.querySelector('div.settings-content');
+
   emptyStateContainer.classList.add('hidden');
+  mainContentDiv.classList.add('hidden');
 
   let navContainer = document.querySelector('div.heading');
   navContainer.classList.add('settings');
@@ -123,8 +127,7 @@ function setSettingsView() {
   navbar.innerHTML = `<span class="icon">&#8592;</span> Back to Bookmarklets`;
   navbar.classList.add('settings-nav');
   
-  let mainContentDiv = document.querySelector('div.main-content');
-  mainContentDiv.innerHTML = `
+  settingsContentDiv.innerHTML = `
   <div class="settings-container">
   <div class="settings-section domains">
   <p class="settings-section--title">Domains</p>
@@ -148,6 +151,7 @@ function setSettingsView() {
 
 function setMainView() {
   document.querySelector('div.main-content').innerHTML = '';
+  document.querySelector('div.settings-content').classList.add('hidden');
   location.reload(true);
 }
 
