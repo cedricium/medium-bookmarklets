@@ -1,4 +1,17 @@
 (function() {
+  browser.storage.onChanged.addListener(function (changes, areaName) {
+    if (Object.keys(changes).length === 1 && !changes.domains) {
+      let url = Object.keys(changes)[0];
+      // TODO: check if changes has newValue (meaining bookmarklet added)
+      if (changes[url].newValue) {
+        // if yes, remove + created card || update card
+        findExistingCard(changes[url].newValue);
+        // if no, then create new card
+      } else if (changes[url].oldValue)
+        removeCard(changes[url].oldValue);
+    }
+  });
+
   let bookmarklets = {};
   let gettingBookmarklets = browser.storage.local.get(null);
   gettingBookmarklets.then((data) => {
@@ -11,13 +24,21 @@
   }, onError);
 })();
 
+
+let numberOfCards = 0;
 let emptyStateContainer = document.querySelector('div.empty-state');
+
 
 function onError(err) {
   console.error(err);
 }
 
+
 function createCard(obj) {
+  numberOfCards++;
+  if (numberOfCards > 0)
+    emptyStateContainer.classList.add('hidden');
+
   let url = obj.url,
       id = obj.id,
       title = obj.title,
@@ -29,9 +50,13 @@ function createCard(obj) {
 
   let card = document.createElement('div');
   card.classList.add('card');
+  card.dataset.id = id;
+  card.dataset.url = url;
+  card.dataset.title = title;
 
   let cardContainer = document.createElement('div');
   cardContainer.classList.add('card-container');
+  cardContainer.dataset.urlRedirect = complete_url;
   
   cardContainer.innerHTML = `
     <p class="title">${title}</p>
@@ -43,8 +68,42 @@ function createCard(obj) {
   mainContent.appendChild(card);
 
   cardContainer.addEventListener('click', function(e) {
-    openBookmarklet(complete_url);
+    openBookmarklet(e.target.parentElement.dataset.urlRedirect);
   });
+}
+
+function removeCard(obj) {
+  numberOfCards--;
+  if (numberOfCards < 1)
+    emptyStateContainer.classList.remove('hidden');
+  
+  let title = obj.title;
+
+  let card = document.querySelector(`div.card[data-title="${title}"]`);
+  let mainContent = document.querySelector('div.main-content');
+
+  mainContent.removeChild(card);
+}
+
+function findExistingCard(obj) {
+  let title = obj.title;
+  let card = document.querySelector(`div.card[data-title="${title}"]`);
+
+  if (card !== null)
+    updateCard(obj);
+  else 
+    createCard(obj);
+}
+
+function updateCard(obj) {
+  let url = obj.url,
+      id = obj.id,
+      title = obj.title;
+
+  let cardUrl = document.querySelector(`div.card[data-title="${title}"] div.card-container p.url`);
+  let complete_url = url + '#' + id;
+  cardUrl.textContent = complete_url;
+  cardUrl.parentElement.dataset.urlRedirect = complete_url;
 }
 
 
@@ -54,7 +113,6 @@ function openBookmarklet(url) {
 
 
 document.querySelector('p.nav').addEventListener('click', setSettingsView);
-
 function setSettingsView() {
   emptyStateContainer.classList.add('hidden');
 
