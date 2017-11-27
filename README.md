@@ -29,7 +29,7 @@ Currently, Medium Bookmarklets is only available for Firefox. Click the button b
  ## Contributing
 
 Suggestions and pull requests are highly encouraged!
-In order to make modifications to the extension you'd need to run it locally. Having [`web-ext`](https://github.com/mozilla/web-ext)` installed, follow the steps below:
+In order to make modifications to the extension you'd need to run it locally. Having [`web-ext`](https://github.com/mozilla/web-ext) installed, follow the steps below:
 
 ```sh
 git clone https://github.com/cedricium/medium-bookmarklets.git
