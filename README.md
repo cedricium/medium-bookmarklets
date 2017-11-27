@@ -5,6 +5,10 @@ Do you ever find yourself reading articles on Medium then adding the article to 
 
 With **Medium Bookmarklets**, you can save your spot in any Medium article. After doing so, a card for that Medium article will populate in the **Medium Bookmarklets** sidebar which allows you to select the card and it will direct you to the exact spot that you placed your *bookmarklet*. See how it works below!
 
+<p align="center">
+  <img src="res/mb_bookmarklet.png"/>
+</p>
+
 **View the [demonstration video on YouTube](https://youtu.be/1s8P4-ZKylI).**
 
 ## Install
