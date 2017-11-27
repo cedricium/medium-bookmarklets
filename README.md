@@ -5,14 +5,14 @@ Do you ever find yourself reading articles on Medium then adding the article to 
 
 With **Medium Bookmarklets**, you can save your spot in any Medium article. After doing so, a card for that Medium article will populate in the **Medium Bookmarklets** sidebar which allows you to select the card and it will direct you to the exact spot that you placed your *bookmarklet*. See how it works below!
 
-**View the [demonstration video on YouTube](youtube.com/link/to_mb_demo).**
+**View the [demonstration video on YouTube](https://youtu.be/1s8P4-ZKylI).**
 
 ## Install
 
 Currently, Medium Bookmarklets is only available for Firefox. Click the button below to get it from AMO (addons.mozilla.org):
 
 <p align="left">
-  <a href="https://addons.mozilla.org/en-US/firefox/addon/rapidtabopener/">
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/medium-bookmarklets/">
     <img src=".src/resources/ff_badge.png" width="20%"/>
   </a>
 </p>
@@ -36,7 +36,7 @@ git clone https://github.com/cedricium/medium-bookmarklets.git
 cd medium-bookmarklets
 web-ext run     # Run the extension in Firefox
 OR
-web-ext build   # Create an extension package from source which can be uploaded via [about:debugging#addons]
+web-ext build   # Create an extension package from source
 ```
 
 ## License

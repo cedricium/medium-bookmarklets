@@ -6,8 +6,8 @@
   "description": "Easy way to save your place in Medium articles and return to them later.",
 
   "icons": {
-    "64": "resources/sidebar_icon.png",
-    "128": "resources/sidebar_icon.png"
+    "64": "resources/icons/sidebar_icon_64.png",
+    "128": "resources/icons/sidebar_icon_128.png"
   },
   
   "permissions": [
