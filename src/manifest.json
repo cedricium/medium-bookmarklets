@@ -2,6 +2,13 @@
   "manifest_version": 2,
   "name": "medium-bookmarklets",
   "version": "0.0.1",
+
+  "description": "Easy way to save your place in Medium articles and return to them later.",
+
+  "icons": {
+    "64": "resources/sidebar_icon.png",
+    "128": "resources/sidebar_icon.png"
+  },
   
   "permissions": [
     "activeTab",

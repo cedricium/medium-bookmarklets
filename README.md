@@ -1,5 +1,5 @@
-# <img src=".src/resources/bookmark_tabs.png" width="50" align="left"> Medium Bookmarklets
-> Allows for saving and later navigating to one's place in Medium articles.
+# <img src=".src/resources/sidebar_icon.png" width="50" align="left"> Medium Bookmarklets
+> Easy way to save your place in Medium articles and return to them later.
 
 Do you ever find yourself reading articles on Medium then adding the article to your Bookmarks because you don'y have time to finish it? Maybe because you're reading on your commute to work and your stop is approaching, or at night before bed and you're getting sleepy. And if the article is particulary long, you may also forget where you last left off since the last time you were reading that article. Adding it to your Bookmarks may not be the best solution - that's where **Medium Bookmarklets** comes in.
 
