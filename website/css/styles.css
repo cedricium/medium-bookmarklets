@@ -1,0 +1,7 @@
+h1.title.is-1 {
+  font-family: 'Playfair Display Bold';
+}
+
+figure.image img {
+  box-shadow: 0 5px 30px 0 rgba(42, 40, 41, 0.5);
+}

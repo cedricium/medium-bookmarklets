@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Medium Bookmarklets</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.6.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
+  
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <section class="hero is-fullheight is-default is-bold">
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../">
+            <img src="../images/bulma.png" alt="Logo">
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active">
+              Home
+            </a>
+            <a class="navbar-item">
+              Examples
+            </a>
+            <a class="navbar-item">
+              Features
+            </a>
+            <a class="navbar-item">
+              Team
+            </a>
+            <a class="navbar-item">
+              Help
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="title is-1">
+              Medium Bookmarklets
+            </h1>
+            <h2 class="subtitle is-5">
+              Easy way to save your place in Medium articles and return to them later.
+            </h2>
+            <br>
+            <p class="has-text-centered">
+              <a class="button is-medium is-info ">
+                + Add to Firefox
+              </a>
+            </p>
+          </div>
+          <!-- <div class="column is-5">
+            <figure class="image is-16by9">
+              <img src="mb_screenshot_test.png" alt="Description">
+            </figure>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="hero is-info is-medium is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            The new standard in &lt;insert industry here&gt;
+          </h1>
+          <h2 class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </h2>
+        </div>
+      </div>
+
+    <div class="hero-foot">
+      <div class="container">
+        <div class="tabs is-centered">
+          <ul>
+            <li><a>And this at the bottom</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script type="text/javascript">
+    // The following code is based off a toggle menu by @Bradcomp
+    // source: https://gist.github.com/Bradcomp/a9ef2ef322a8e8017443b626208999c1
+    (function() {
+      var burger = document.querySelector('.nav-toggle');
+      var menu = document.querySelector('.nav-menu');
+      burger.addEventListener('click', function() {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    })();
+  </script>
+</body>
+</html>
