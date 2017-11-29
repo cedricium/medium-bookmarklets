@@ -8,7 +8,7 @@
   <title>Medium Bookmarklets</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
   <!-- Bulma Version 0.6.0 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
   
@@ -16,103 +16,239 @@
 
 </head>
 <body>
-  <section class="hero is-fullheight is-default is-bold">
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="../">
-            <img src="../images/bulma.png" alt="Logo">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="navbar-item logo-text">Medium Bookmarklets</span>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item is-active">
+            Home
           </a>
-          <span class="navbar-burger burger" data-target="navbarMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenu" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active">
-              Home
-            </a>
-            <a class="navbar-item">
-              Examples
-            </a>
-            <a class="navbar-item">
-              Features
-            </a>
-            <a class="navbar-item">
-              Team
-            </a>
-            <a class="navbar-item">
-              Help
-            </a>
-          </div>
+          <a class="navbar-item">
+            Examples
+          </a>
+          <a class="navbar-item">
+            Features
+          </a>
+          <a class="navbar-item">
+            Team
+          </a>
+          <a class="navbar-item">
+            Help
+          </a>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+
+  <section class="hero is-fullheight is-default">
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="columns is-vcentered">
-          <div class="column">
-            <h1 class="title is-1">
-              Medium Bookmarklets
+          <div class="column is-5">
+            <h1 class="title is-2">
+              Bookmarking, Simplified
             </h1>
-            <h2 class="subtitle is-5">
-              Easy way to save your place in Medium articles and return to them later.
+            <h2 class="subtitle is-3">
+              Never forget where you last left off in a Medium article again.
             </h2>
             <br>
             <p class="has-text-centered">
-              <a class="button is-medium is-info ">
+              <a class="button is-medium is-info">
                 + Add to Firefox
               </a>
             </p>
           </div>
-          <!-- <div class="column is-5">
+          <div class="column is-7">
             <figure class="image is-16by9">
-              <img src="mb_screenshot_test.png" alt="Description">
+              <img src="mb_demo.gif">
             </figure>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    </section>
-
-    <section class="hero is-info is-medium is-bold">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title">
-            The new standard in &lt;insert industry here&gt;
-          </h1>
-          <h2 class="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </h2>
-        </div>
-      </div>
-
-    <div class="hero-foot">
-      <div class="container">
-        <div class="tabs is-centered">
-          <ul>
-            <li><a>And this at the bottom</a></li>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
+
+  <section class="section is-medium features">
+
+    <div class="columns">
+      <div class="column has-text-centered">
+        <header class="section-header">
+          <h3 class="title is-4 is-spaced">Medium bookmarks as they were meant to be</h3>
+          <div class="subtitle is-5">
+            <p>
+                “Bookmarks” in Medium aren’t very helpful when you’re trying to find the place
+                where you last left off reading. Stop scrolling through long articles to find
+                your place and let Medium Bookmarklets do the work for you.
+            </p>
+          </div>
+        </header>
+
+        <div class="section-body">
+          <div class="columns">
+            <div class="column is-4">
+              <!-- CARD -->
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                    <nav class="level is-mobile">
+                      <div class="level-left">
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                        </a>
+                      </div>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="column is-4">
+              <!-- CARD -->
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                    <nav class="level is-mobile">
+                      <div class="level-left">
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                        </a>
+                      </div>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="column is-4">
+              <!-- CARD -->
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                    <nav class="level is-mobile">
+                      <div class="level-left">
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                        </a>
+                        <a class="level-item">
+                          <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                        </a>
+                      </div>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-medium examples">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-3 is-offset-2">
+          <figure class="image">
+            <img src="mb_sidebar1.png">
+          </figure>
+        </div>
+        <div class="column is-4 is-offset-1">
+          <div class="title is-3">
+            <p>Simple and elegant sidebar design, defaulting to a beautiful dark theme.</p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-vcentered">
+        <div class="column is-4 is-offset-2">
+          <div class="title is-3">
+            <p>Easy-to-use settings page to unlock Medium Bookmarklets for your favorite publications.</p>
+          </div>
+        </div>
+        <div class="column is-3 is-offset-1">
+          <figure class="image">
+            <img src="mb_sidebar3.png">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script type="text/javascript">
-    // The following code is based off a toggle menu by @Bradcomp
-    // source: https://gist.github.com/Bradcomp/a9ef2ef322a8e8017443b626208999c1
-    (function() {
-      var burger = document.querySelector('.nav-toggle');
-      var menu = document.querySelector('.nav-menu');
-      burger.addEventListener('click', function() {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-      });
-    })();
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all "navbar-burger" elements
+      var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach(function ($el) {
+          $el.addEventListener('click', function () {
+            // Get the target from the "data-target" attribute
+            var target = $el.dataset.target;
+            var $target = document.getElementById(target);
+            // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+            $el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
   </script>
 </body>
 </html>
