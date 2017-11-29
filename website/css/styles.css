@@ -43,3 +43,37 @@ section.section.examples img {
 section.section.examples div.columns.is-vcentered {
   margin-bottom: 4rem;
 }
+
+
+section.hero.call-to-action {
+  position: relative;
+}
+
+section.hero.call-to-action::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  height: 100%;
+  background: rgb(32, 156, 238);
+  -webkit-transform: skewY(-3.5deg);
+  -moz-transform: skewY(-3.5deg);
+  -ms-transform: skewY(-3.5deg);
+  -o-transform: skewY(-3.5deg);
+  transform: skewY(-3.5deg);
+  -webkit-backface-visibility: hidden;
+}
+
+section.hero.call-to-action a.button:hover {
+  color: rgb(32, 156, 238);
+}
+
+/* Footer */
+div.hero-footer {
+  padding: 0 0 2rem 0;
+}
+
+div.hero-footer a {
+  text-decoration: underline;
+}
