@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../res/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
   "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -57,7 +64,7 @@ div.box {
 }
 
 section.section.features header.section-header {
-  max-width: 660px;
+  max-width: 75%;
   margin: 0 auto 3rem auto;
 }
 
@@ -120,7 +127,6 @@ section.section.examples div.columns.is-vcentered {
 
 .spoil-faq .spoil-content {
 	color: rgba(54, 54, 54, 0.8);
-	/* font-size: 18px; */
 	line-height: 28px;
 }
 
@@ -129,7 +135,7 @@ section.section.examples div.columns.is-vcentered {
 /* Call to Action */
 
 section.hero.call-to-action {
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 1rem 0;
 }
 
 section.hero.call-to-action a.button:hover {
@@ -141,7 +147,7 @@ section.hero.call-to-action a.button:hover {
 /* Footer */
 
 div.hero-footer {
-  padding: 0 0 2rem 0;
+  padding: 0 0 0 0;
 }
 
 div.hero-footer a {

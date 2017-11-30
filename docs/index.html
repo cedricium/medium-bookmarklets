@@ -7,11 +7,11 @@
 
   <title>Medium Bookmarklets</title>
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
   <!-- Bulma Version 0.6.0 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
-  
+  <link rel="stylesheet" href="css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -61,14 +61,15 @@
             </h2>
             <br>
             <p class="has-text-centered">
-              <a class="button is-medium is-info" href="https://addons.mozilla.org/en-US/firefox/addon/medium-bookmarklets/">
+              <a class="button is-medium is-info"
+                href="https://addons.mozilla.org/en-US/firefox/addon/medium-bookmarklets/">
                 + Add to Firefox
               </a>
             </p>
           </div>
           <div class="column is-7">
             <figure class="image is-16by9">
-              <img src="images/mb_demo.gif">
+              <img src="res/images/mb_demo.gif">
             </figure>
           </div>
         </div>
@@ -157,7 +158,7 @@
       <div class="columns is-vcentered">
         <div class="column is-3 is-offset-2">
           <figure class="image">
-            <img src="images/mb_sidebar1.png">
+            <img src="res/images/mb_sidebar1.png">
           </figure>
         </div>
         <div class="column is-4 is-offset-1">
@@ -180,14 +181,14 @@
         </div>
         <div class="column is-3 is-offset-1">
           <figure class="image">
-            <img src="images/mb_sidebar3.png">
+            <img src="res/images/mb_sidebar3.png">
           </figure>
         </div>
       </div>
       <div class="columns is-vcentered">
         <div class="column is-3 is-offset-2">
           <figure class="image">
-            <img src="images/mb_sidebar2.png">
+            <img src="res/images/mb_sidebar2.png">
           </figure>
         </div>
         <div class="column is-4 is-offset-1">
@@ -221,16 +222,18 @@
               <div class="spoil-content">
                 <div class="content">
                   <p>
-                    There are four main actions when using Medium Bookmarklets: adding, removing, updating, and viewing bookmarklets.
-                    The first three are done within Medium articles themselves:
+                    There are four main actions when using Medium Bookmarklets: adding, removing, updating, and
+                    viewing bookmarklets. The first three are done within Medium articles themselves:
                     <ul>
-                      <li><strong>Adding</strong>: highlight the text where you want to save your spot, then press <kbd>B</kbd></li>
+                      <li><strong>Adding</strong>: highlight the text where you want to save your spot, then press
+                        <kbd>B</kbd></li>
                       <li><strong>Removing</strong>: simply click on the lightcoral-colored bookmarklet highlight</li>
-                      <li><strong>Updating</strong>: similar to adding a bookmarklet, just highlight new text and press <kbd>B</kbd></li>
+                      <li><strong>Updating</strong>: similar to adding a bookmarklet, just highlight new text and press
+                        <kbd>B</kbd></li>
                     </ul>
 
-                    <strong>Viewing</strong> bookmarklets is done by clicking the respective bookmarklet card in the sidebar, which will take you
-                    exactly to the spot where the bookmarklet highlight was added.
+                    <strong>Viewing</strong> bookmarklets is done by clicking the respective bookmarklet card in the
+                    sidebar, which will take you exactly to the spot where the bookmarklet highlight was added.
                   </p>
                 </div>
               </div>
@@ -243,8 +246,8 @@
             <div class="spoil-wrap">
               <div class="spoil-content">
                 <div class="content">
-                  Bookmarklets are synonymous with bookmarks. They're not named that however because Medium uses "Bookmarks", so a
-                  different name was needed.
+                  Bookmarklets are synonymous with bookmarks. They're not named that however because Medium uses
+                  "Bookmarks", so a different name was needed.
                 </div>
               </div>
             </div>
@@ -256,8 +259,10 @@
             <div class="spoil-wrap">
               <div class="spoil-content">
                 <div class="content">
-                  <strong>Medium</strong> Bookmarklets will only work on Medium (<a href="https://medium.com" target="_blank">https://medium.com</a>).
-                  However, with the ability to add domains, you can add bookmarklets to your favorite publications which host their blogs on Medium.
+                  <strong>Medium</strong> Bookmarklets will only work on Medium (<a href="https://medium.com"
+                    target="_blank">https://medium.com</a>).
+                  However, with the ability to add domains, you can add bookmarklets to your favorite publications
+                  which host their blogs on Medium.
                 </div>
               </div>
             </div>
@@ -309,11 +314,12 @@
             <div class="spoil-wrap">
               <div class="spoil-content">
                 <div class="content">
-                  If you <a href="https://github.com/cedricium/medium-bookmarklets/blob/master/src/manifest.json#L26">look at the source code</a>,
-                  you'd notice Medium Bookmarklets' content script is allowed to manipulate all URLs. This was required since many publications
-                  hosted on Medium did not have domains that fall under "medium.com". To compensate for this, users must add any non-<code>medium.com</code>
-                  publication domain if they'd like to add bookmarklets to that publication's articles. This allows us to make it so that
-                  our scripts are not ran on websites other than Medium.
+                  If you <a href="https://github.com/cedricium/medium-bookmarklets/blob/master/src/manifest.json#L26">
+                    look at the source code</a>, you'd notice Medium Bookmarklets' content script is allowed to
+                  manipulate all URLs. This was required since many publications hosted on Medium did not have domains
+                  that fall under "medium.com". To compensate for this, users must add any non-<code>medium.com</code>
+                  publication domain if they'd like to add bookmarklets to that publication's articles. This allows us
+                  to make it so that our scripts are not ran on websites other than Medium.
                 </div>
               </div>
             </div>
@@ -326,9 +332,10 @@
               <div class="spoil-content">
                 <div class="content">
                   Great, you'd like to contribute! Go ahead and fork the
-                  <a class="monospace" href="https://github.com/cedricium/medium-bookmarklets"target="_blank">cedricium/medium-bookmarklets</a>
-                  repository on GitHub and make any changes you see fit. Then, open a pull request and we'd be happy to review your work.
-                  If coding isn't your thing, we welcome testers and translators as well.
+                  <a class="monospace" href="https://github.com/cedricium/medium-bookmarklets"
+                    target="_blank">cedricium/medium-bookmarklets</a> repository on GitHub and make any changes you see
+                  fit. Then, open a pull request and we'd be happy to review your work. If coding isn't your thing, we
+                  welcome testers and translators as well.
                 </div>
               </div>
             </div>
@@ -349,13 +356,15 @@
         </div>
 
         <p class="field">
-          <a class="button is-white is-large is-outlined" href="https://addons.mozilla.org/en-US/firefox/addon/medium-bookmarklets/">
+          <a class="button is-white is-large is-outlined"
+            href="https://addons.mozilla.org/en-US/firefox/addon/medium-bookmarklets/">
             <span class="icon">
               <i class="fa fa-firefox"></i>
             </span>
             <span>Add to Firefox</span>
           </a>
-          <a class="button is-white is-large is-outlined" href="https://github.com/cedricium/medium-bookmarklets" target="_blank">
+          <a class="button is-white is-large is-outlined"
+            href="https://github.com/cedricium/medium-bookmarklets" target="_blank">
             <span class="icon">
               <i class="fa fa-github"></i>
             </span>
@@ -370,9 +379,10 @@
         <div class="content has-text-centered">
           <p>
             <strong>Medium Bookmarklets</strong> by <a href="http://cedricamaya.me" target="_blank">Cedric Amaya</a>.
-            The source code is licensed <a href="https://github.com/cedricium/medium-bookmarklets/blob/master/LICENSE.md" target="_blank">MIT</a>.
+            The source code is licensed
+            <a href="https://github.com/cedricium/medium-bookmarklets/blob/master/LICENSE.md" target="_blank">MIT</a>.
             <a href="https://bulma.io">
-              <img src="images/made-with-bulma--white.png" alt="Made with Bulma" width="128" height="24">
+              <img src="res/images/made-with-bulma--white.png" alt="Made with Bulma" width="128" height="24">
             </a>
           </p>
         </div>
