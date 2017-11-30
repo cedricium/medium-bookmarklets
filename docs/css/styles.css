@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../res/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+kbd {
+  padding: 0.1em 0.6em;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.1em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.4;
+  white-space: nowrap;
+  vertical-align: text-top;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-family: 'Playfair Display';
+  font-weight: bold;
+}
+
+figure.image img {
+  box-shadow: 0px 0px 15px rgba(42, 40, 41, 0.5);
+}
+
+.is-highlighted {
+  color: rgb(32, 156, 238);
+}
+
+
+
+/* Features */
+
+section.section.features,
+section.section.faq {
+  background: #F7F7F7;
+}
+
+div.box {
+  border-color: transparent;
+}
+
+section.section.features header.section-header {
+  max-width: 75%;
+  margin: 0 auto 3rem auto;
+}
+
+section.section.features header.section-header .subtitle {
+  line-height: 1.75rem;
+}
+
+
+
+/* Screenshots */
+
+section.section.examples img {
+  width: 85% !important;
+}
+
+section.section.examples div.columns.is-vcentered {
+  margin-bottom: 4rem;
+}
+
+
+
+/* FAQ */
+
+.spoil-faq {
+  border-bottom: 1px solid rgba(107,124,147,0.18);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.spoil-faq:last-of-type {
+  border: none;
+}
+
+.spoil-faq .spoil-head:hover,
+.spoil-faq.open .spoil-head {
+  color: #0081FF;
+}
+
+.spoil-faq.open {
+  padding-bottom: 40px;
+}
+
+.spoil-faq .spoil-head {
+  cursor: pointer;
+  padding: 40px 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(54, 54, 54, 0.8);
+  line-height: 1.45;
+}
+
+.spoil-wrap {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .3s;
+  transition: height .3s;
+}
+
+.spoil-faq .spoil-content {
+  color: rgba(54, 54, 54, 0.8);
+  line-height: 28px;
+}
+
+
+
+/* Call to Action */
+
+section.hero.call-to-action {
+  padding: 2rem 0 1rem 0;
+}
+
+section.hero.call-to-action a.button:hover {
+  color: rgb(32, 156, 238);
+}
+
+
+
+/* Footer */
+
+div.hero-footer {
+  padding: 0 0 0 0;
+}
+
+div.hero-footer a {
+  text-decoration: underline;
+}
+
+div.hero-footer a img {
+  vertical-align: middle;
+}
