@@ -28,20 +28,20 @@
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item is-active">
+          <a class="navbar-item is-active" href="#">
             Home
           </a>
-          <a class="navbar-item">
-            Examples
-          </a>
-          <a class="navbar-item">
+          <a class="navbar-item" href="#features"> 
             Features
           </a>
-          <a class="navbar-item">
-            Team
+          <a class="navbar-item" href="#screenshots">
+            Screenshots
           </a>
-          <a class="navbar-item">
-            Help
+          <a class="navbar-item" href="#faq">
+              FAQ
+            </a>
+          <a class="navbar-item" href="#cta">
+            Download
           </a>
         </div>
       </div>
@@ -61,14 +61,14 @@
             </h2>
             <br>
             <p class="has-text-centered">
-              <a class="button is-medium is-info">
+              <a class="button is-medium is-info" href="https://addons.mozilla.org/en-US/firefox/addon/medium-bookmarklets/">
                 + Add to Firefox
               </a>
             </p>
           </div>
           <div class="column is-7">
             <figure class="image is-16by9">
-              <img src="mb_demo.gif">
+              <img src="images/mb_demo.gif">
             </figure>
           </div>
         </div>
@@ -76,7 +76,7 @@
     </div>
   </section>
 
-  <section class="section is-medium features">
+  <section class="section is-medium features" id="features">
 
     <div class="columns">
       <div class="column has-text-centered">
@@ -152,12 +152,12 @@
     </div>
   </section>
 
-  <section class="section is-medium examples">
+  <section class="section is-medium examples" id="screenshots">
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-3 is-offset-2">
           <figure class="image">
-            <img src="mb_sidebar1.png">
+            <img src="images/mb_sidebar1.png">
           </figure>
         </div>
         <div class="column is-4 is-offset-1">
@@ -180,14 +180,14 @@
         </div>
         <div class="column is-3 is-offset-1">
           <figure class="image">
-            <img src="mb_sidebar3.png">
+            <img src="images/mb_sidebar3.png">
           </figure>
         </div>
       </div>
       <div class="columns is-vcentered">
         <div class="column is-3 is-offset-2">
           <figure class="image">
-            <img src="mb_sidebar2.png">
+            <img src="images/mb_sidebar2.png">
           </figure>
         </div>
         <div class="column is-4 is-offset-1">
@@ -202,44 +202,196 @@
     </div>
   </section>
 
-  <section class="hero is-info call-to-action">
+  <section class="section is-medium faq" id="faq">
+    <div class="container">
+      <div class="columns">
+        <div class="column has-text-centered">
+          <header class="section-header">
+            <h3 class="title is-3">Frequently Asked Questions</h3>
+          </header>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-5 is-offset-1">
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              How do I use Medium Bookmarklets?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  <p>
+                    There are four main actions when using Medium Bookmarklets: adding, removing, updating, and viewing bookmarklets.
+                    The first three are done within Medium articles themselves:
+                    <ul>
+                      <li><strong>Adding</strong>: highlight the text where you want to save your spot, then press <kbd>B</kbd></li>
+                      <li><strong>Removing</strong>: simply click on the lightcoral-colored bookmarklet highlight</li>
+                      <li><strong>Updating</strong>: similar to adding a bookmarklet, just highlight new text and press <kbd>B</kbd></li>
+                    </ul>
+
+                    <strong>Viewing</strong> bookmarklets is done by clicking the respective bookmarklet card in the sidebar, which will take you
+                    exactly to the spot where the bookmarklet highlight was added.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              What are bookmarklets?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  Bookmarklets are synonymous with bookmarks. They're not named that however because Medium uses "Bookmarks", so a
+                  different name was needed.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              What websites can I use this on?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  <strong>Medium</strong> Bookmarklets will only work on Medium (<a href="https://medium.com" target="_blank">https://medium.com</a>).
+                  However, with the ability to add domains, you can add bookmarklets to your favorite publications which host their blogs on Medium.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              Can I add multiple bookmarklets to one article?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  No, only one bookmarklet can be added to any given article.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column is-5">
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              Can I delete bookmarklets from the sidebar?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  No, not currently. But this is a great idea and is on the roadmap for planned features.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              Is there a light-themed sidebar?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  Although the dark theme is pretty amazing, we plan on adding a light theme for the sidebar
+                  as well. Stay tuned!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              Why do I need to add publication domains?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  If you <a href="https://github.com/cedricium/medium-bookmarklets/blob/master/src/manifest.json#L26">look at the source code</a>,
+                  you'd notice Medium Bookmarklets' content script is allowed to manipulate all URLs. This was required since many publications
+                  hosted on Medium did not have domains that fall under "medium.com". To compensate for this, users must add any non-<code>medium.com</code>
+                  publication domain if they'd like to add bookmarklets to that publication's articles. This allows us to make it so that
+                  our scripts are not ran on websites other than Medium.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoil spoil-faq">
+            <div class="spoil-head spoil-trigg" onclick="toggleSpoil(this)">
+              How can I contribute to Medium Bookmarklets?
+            </div>
+            <div class="spoil-wrap">
+              <div class="spoil-content">
+                <div class="content">
+                  Great, you'd like to contribute! Go ahead and fork the
+                  <a class="monospace" href="https://github.com/cedricium/medium-bookmarklets"target="_blank">cedricium/medium-bookmarklets</a>
+                  repository on GitHub and make any changes you see fit. Then, open a pull request and we'd be happy to review your work.
+                  If coding isn't your thing, we welcome testers and translators as well.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-info call-to-action" id="cta">
     <div class="hero-body">
       <div class="container has-text-centered">
         <h2 class="title is-1 is-spaced logo-text">Medium Bookmarklets</h2>
         <div class="subtitle">
           <p>
-            Stop wasting time looking for your place and <strong>spend more time reading.</strong>
+            Stop wasting time looking for your place and instead <strong>spend more time reading.</strong>
           </p>
         </div>
 
         <p class="field">
-          <a class="button is-white is-large is-outlined">
+          <a class="button is-white is-large is-outlined" href="https://addons.mozilla.org/en-US/firefox/addon/medium-bookmarklets/">
             <span class="icon">
               <i class="fa fa-firefox"></i>
             </span>
             <span>Add to Firefox</span>
           </a>
-          <a class="button is-white is-large is-outlined">
+          <a class="button is-white is-large is-outlined" href="https://github.com/cedricium/medium-bookmarklets" target="_blank">
             <span class="icon">
               <i class="fa fa-github"></i>
             </span>
-            <span>Fork on GitHub</span>
+            <span>View on GitHub</span>
           </a>
         </p>
       </div>
     </div>
 
     <div class="hero-footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <p>
-              <strong>Medium Bookmarklets</strong> by <a href="http://cedricamaya.me" target="_blank">Cedric Amaya</a>.
-              The source code is licensed <a href="https://github.com/cedricium/medium-bookmarklets/blob/master/LICENSE.md" target="_blank">MIT</a>.
-            </p>
-          </div>
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Medium Bookmarklets</strong> by <a href="http://cedricamaya.me" target="_blank">Cedric Amaya</a>.
+            The source code is licensed <a href="https://github.com/cedricium/medium-bookmarklets/blob/master/LICENSE.md" target="_blank">MIT</a>.
+            <a href="https://bulma.io">
+              <img src="images/made-with-bulma--white.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </p>
         </div>
+      </div>
     </div>
   </section>
+
+  <script type="text/javascript">
+    function toggleSpoil(e) {
+      e.parentElement.classList.toggle('open');
+      let spH = e.nextElementSibling.children[0].clientHeight;
+      
+      if (e.parentElement.classList.contains('open')){
+        e.nextElementSibling.style.height = spH + 'px';
+      } else {
+        e.nextElementSibling.style.height = 0;
+      }
+    }
+  </script>
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
