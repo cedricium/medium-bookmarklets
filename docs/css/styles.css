@@ -89,9 +89,9 @@ section.section.examples div.columns.is-vcentered {
 /* FAQ */
 
 .spoil-faq {
-	border-bottom: 1px solid rgba(107,124,147,0.18);
-	-webkit-transition: all .3s;
-	transition: all .3s;
+  border-bottom: 1px solid rgba(107,124,147,0.18);
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .spoil-faq:last-of-type {
@@ -100,34 +100,34 @@ section.section.examples div.columns.is-vcentered {
 
 .spoil-faq .spoil-head:hover,
 .spoil-faq.open .spoil-head {
-	color: #0081FF;
+  color: #0081FF;
 }
 
 .spoil-faq.open {
-	padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .spoil-faq .spoil-head {
-	cursor: pointer;
-	padding: 40px 0;
-	-webkit-transition: all .3s;
-	transition: all .3s;
-	text-transform: uppercase;
+  cursor: pointer;
+  padding: 40px 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-transform: uppercase;
   font-weight: bold;
-	color: rgba(54, 54, 54, 0.8);
-	line-height: 1.45;
+  color: rgba(54, 54, 54, 0.8);
+  line-height: 1.45;
 }
 
 .spoil-wrap {
-	height: 0;
-	overflow: hidden;
-	-webkit-transition: height .3s;
-	transition: height .3s;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .3s;
+  transition: height .3s;
 }
 
 .spoil-faq .spoil-content {
-	color: rgba(54, 54, 54, 0.8);
-	line-height: 28px;
+  color: rgba(54, 54, 54, 0.8);
+  line-height: 28px;
 }
 
 
