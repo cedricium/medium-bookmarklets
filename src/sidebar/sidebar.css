@@ -185,8 +185,8 @@ button.button {
   line-height: 36px;
 }
 
-button.button:hover {
-}
+button.button:hover { background: #1a8dff; }
+button.button:active { background: #0073e6; }
 
 
 input.outline {
@@ -201,6 +201,13 @@ input.outline {
   padding: 0 12px;
   margin: 5px 0;
 }
+
+input.outline:hover {
+  color: #fff;
+  background: #0080ff;
+}
+
+input.outline:active { background: #0073e6; }
 
 div.domain-input {
   width: 100%;
@@ -225,6 +232,13 @@ div.domain-input input.outline.remove {
   border: solid thin #7F3142;
   width: 80px;
 }
+
+div.domain-input input.outline.remove:hover {
+  color: #fff;
+  background: #7F3142;
+}
+
+div.domain-input input.outline.remove:active { background: #6d2a38; }
 
 div.domain-input input.domain {
   background: transparent;
