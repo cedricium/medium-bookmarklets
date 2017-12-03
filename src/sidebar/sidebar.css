@@ -147,6 +147,28 @@ p.empty-state--subtitle {
 /* Settings View
 ---------------------------------------------------- */
 
+div.notification {
+  width: 100%;
+  height: auto;
+  padding: 5px 10px;
+  color: rgb(34, 198, 91);
+  background: transparent;
+  border: solid thin rgb(34, 198, 91);
+  border-radius: 4px;
+  margin: 0 0 1rem 0;
+  -webkit-animation: slide-down .2s ease-out;
+}
+
+div.notification p {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+@-webkit-keyframes slide-down {
+  0% { opacity: 0; -webkit-transform: translateY(-50%); }   
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
 div.heading.settings {
   text-align: left;
 }

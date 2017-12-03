@@ -129,6 +129,9 @@ function setSettingsView() {
   
   settingsContentDiv.innerHTML = `
   <div class="settings-container">
+  <div class="notification hidden">
+  <p>✓ Settings successfully saved!</p>
+  </div>
   <div class="settings-section domains">
   <p class="settings-section--title">Domains</p>
   <small class="settings-section--desc">
@@ -193,6 +196,7 @@ function setPreexistingDomainComponents() {
 }
 
 function saveDomains() {
+  let notification = document.querySelector('div.notification');
   let domainComponentsInput = document.getElementsByClassName('string domain');
   let domains = [];
 
@@ -200,5 +204,11 @@ function saveDomains() {
     domains.push(domainComponentsInput[i].value);
   }
 
-  browser.storage.local.set({domains});
+  let setting = browser.storage.local.set({domains});
+  setting.then((data) => {
+    notification.classList.remove('hidden');
+    setTimeout(function() {
+      notification.classList.add('hidden');
+    }, 2200);
+  });
 }
