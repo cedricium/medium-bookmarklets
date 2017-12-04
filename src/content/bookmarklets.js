@@ -73,7 +73,7 @@ function addBookmarklet(){
 }
 
 
-function removeBookmarkletDot(id) {
+function removeBookmarkletHighlight(id) {
   let bookmarklet = document.getElementById(id);
   bookmarklet.classList.remove('mb__bookmarklet');
   bookmarklet.onclick = function() { return false; };
@@ -81,7 +81,7 @@ function removeBookmarkletDot(id) {
 
 
 function deleteBookmarklet(e) {
-  removeBookmarkletDot(e.target.id);
+  removeBookmarkletHighlight(e.target.id);
   
   let deletingBookmarklet = browser.storage.local.remove(location.href);
   deletingBookmarklet.then(() => {
@@ -106,7 +106,7 @@ function storeBookmarklet(bookmarkletObj) {
 function displayBookmarklet(bookmarkletID) {
   let previousBookmarklet = document.querySelector('.mb__bookmarklet');
   if (previousBookmarklet)
-    removeBookmarkletDot(previousBookmarklet.id);
+    removeBookmarkletHighlight(previousBookmarklet.id);
 
   currentBookmarklet = bookmarkletID;
   let bookmarklet = document.getElementById(bookmarkletID);
