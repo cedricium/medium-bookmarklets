@@ -2,11 +2,8 @@
   browser.storage.onChanged.addListener(function (changes, areaName) {
     if (Object.keys(changes).length === 1 && !changes.domains) {
       let url = Object.keys(changes)[0];
-      // TODO: check if changes has newValue (meaining bookmarklet added)
       if (changes[url].newValue) {
-        // if yes, remove + created card || update card
         findExistingCard(changes[url].newValue);
-        // if no, then create new card
       } else if (changes[url].oldValue)
         removeCard(changes[url].oldValue);
     }
