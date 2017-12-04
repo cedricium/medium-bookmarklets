@@ -76,13 +76,13 @@ function addBookmarklet(){
 function removeBookmarkletDot(id) {
   let bookmarklet = document.getElementById(id);
   bookmarklet.classList.remove('mb__bookmarklet');
+  bookmarklet.onclick = function() { return false; };
 }
 
 
 function deleteBookmarklet(e) {
   removeBookmarkletDot(e.target.id);
-
-  // TODO: delete bookmarklet for given url (set url's value to null? => look up `storage.local.set()` docs)
+  
   browser.storage.local.remove(location.href);
 
   currentBookmarklet = null;
