@@ -16,3 +16,27 @@
 	cursor: pointer;
 	pointer-events: all;
 }
+
+.hidden {
+	display: none;
+}
+
+#notification {
+	position: fixed;
+	z-index: 999 !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #0080ff;
+	color: #fff;
+	text-align: center;
+	line-height: 2.5;
+	overflow: hidden;
+	box-shadow: 0 0 5px rgba(42, 40, 41, 0.8);
+	-webkit-animation: slide-down .5s ease-out;
+}
+
+@-webkit-keyframes slide-down {
+	0% { opacity: 0; -webkit-transform: translateY(-50%); }   
+	100% { opacity: 1; -webkit-transform: translateY(0); }
+}

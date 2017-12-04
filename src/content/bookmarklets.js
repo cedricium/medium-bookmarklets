@@ -83,7 +83,10 @@ function removeBookmarkletDot(id) {
 function deleteBookmarklet(e) {
   removeBookmarkletDot(e.target.id);
   
-  browser.storage.local.remove(location.href);
+  let deletingBookmarklet = browser.storage.local.remove(location.href);
+  deletingBookmarklet.then(() => {
+    displayNotification('deleted');
+  }, onError);
 
   currentBookmarklet = null;
 }
@@ -94,6 +97,7 @@ function storeBookmarklet(bookmarkletObj) {
 
   let storingBookmarklet = browser.storage.local.set({[url]: bookmarkletObj});
   storingBookmarklet.then(() => {
+    displayNotification('added');
     displayBookmarklet(bookmarkletObj.id);
   }, onError);
 }
@@ -132,4 +136,21 @@ function getSelectionData() {
   }
 
   return selectionInfo;
+}
+
+function displayNotification(action) {
+  let notification = document.getElementById('notification');
+  if (notification === null) {
+    notification = document.createElement('div');
+    notification.id = 'notification';
+    notification.classList.add('hidden');
+    
+    document.body.appendChild(notification);
+  }
+
+  notification.textContent = `Bookmarklet successfully ${action}!`;
+  notification.classList.remove('hidden');
+  setTimeout(() => {
+    notification.classList.add('hidden');
+  }, 3000);
 }
