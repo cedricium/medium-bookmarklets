@@ -11,6 +11,8 @@ With **Medium Bookmarklets**, you can save your spot in any Medium article. Afte
 
 **View the [demonstration video on YouTube](https://youtu.be/1s8P4-ZKylI).**
 
+**Visit the official [Medium Bookmarklets website](https://medium-bookmarklets.com).**
+
 ## Install
 
 Currently, Medium Bookmarklets is only available for Firefox. Click the button below to get it from AMO (addons.mozilla.org):
