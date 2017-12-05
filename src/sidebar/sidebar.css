@@ -183,6 +183,15 @@ div.settings-container {
   margin-top: 4rem;
 }
 
+div.settings-section:not(:last-of-type) {
+  margin: 1.5rem 0;
+}
+
+div.settings-section a,
+div.settings-section a:visited {
+  color: #0080ff;
+}
+
 p.settings-section--title {
   margin: 0 0 0.6rem 0;
   padding: 0 0;

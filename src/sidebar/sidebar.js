@@ -126,9 +126,22 @@ function setSettingsView() {
   
   settingsContentDiv.innerHTML = `
   <div class="settings-container">
+  
   <div class="notification hidden">
   <p>✓ Settings successfully saved!</p>
   </div>
+
+  <div class="settings-section instructions">
+  <p class="settings-section--title">How to Use</p>
+  <small class="settings-section--desc">
+  To learn how to use Medium Bookmarklets, visit:
+    <a href="https://github.com/cedricium/medium-bookmarklets#how-to-use">
+      https://github.com/cedricium/medium-bookmarklets#how-to-use
+    </a>
+  .
+  </small>
+  </div>
+
   <div class="settings-section domains">
   <p class="settings-section--title">Domains</p>
   <small class="settings-section--desc">
