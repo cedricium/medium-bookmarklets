@@ -143,14 +143,14 @@ function displayNotification(action) {
   if (notification === null) {
     notification = document.createElement('div');
     notification.id = 'notification';
-    notification.classList.add('hidden');
+    notification.classList.add('mb__hidden');
     
     document.body.appendChild(notification);
   }
 
   notification.textContent = `Bookmarklet successfully ${action}!`;
-  notification.classList.remove('hidden');
+  notification.classList.remove('mb__hidden');
   setTimeout(() => {
-    notification.classList.add('hidden');
+    notification.classList.add('mb__hidden');
   }, 3000);
 }
