@@ -3,9 +3,11 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import router from './router';
 import Buefy from 'buefy';
 import 'buefy/lib/buefy.css';
+
+require('material-design-lite/material.min.css');
+require('material-design-lite/material.min.js');
 
 Vue.config.productionTip = false;
 

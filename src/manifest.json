@@ -31,7 +31,9 @@
 
   "sidebar_action": {
     "default_title": "Medium Bookmarklets",
-    "default_panel": "sidebar/sidebar.html",
+    "default_panel": "sidebar/index.html",
     "default_icon": "resources/sidebar_icon.png"
-  }
+  },
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
 }
