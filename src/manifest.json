@@ -35,5 +35,5 @@
     "default_icon": "resources/sidebar_icon.png"
   },
 
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://use.fontawesome.com/releases/v5.0.10/js/all.js; object-src 'self';"
 }
