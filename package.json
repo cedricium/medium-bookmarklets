@@ -1,0 +1,22 @@
+{
+  "name": "medium-bookmarklets",
+  "version": "1.0.0",
+  "description": "> Easy way to save your place in Medium articles and return to them later.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start-dev": "cd client/ && npm run build && cd ../ && cp -R client/dist/* src/sidebar/. && web-ext run -s src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedricium/medium-bookmarklets.git"
+  },
+  "author": "Cedric Amaya <amaya.cedric@gmail.com> (http://cedricamaya.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedricium/medium-bookmarklets/issues"
+  },
+  "homepage": "https://github.com/cedricium/medium-bookmarklets#readme"
+}
