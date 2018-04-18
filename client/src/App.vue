@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style lang="scss">
+$primary: #7678ed;
+
 @import "~bulma/sass/utilities/_all";
 @import "~bulma/sass/base/generic";
 
@@ -25,12 +27,12 @@ html {
   min-width: 0 !important;
 }
 
+$box-padding: 0.75rem;
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
 }
 
