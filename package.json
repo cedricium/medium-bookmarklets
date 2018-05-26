@@ -1,6 +1,6 @@
 {
   "name": "medium-bookmarklets",
-  "version": "1.1.1",
+  "version": "1.2.0-rc.1",
   "description": "Easy way to save your place in Medium articles and return to them later.",
   "directories": {
     "doc": "docs"
