@@ -1,11 +1,9 @@
-
-(function () {
+(() => {
   browser.storage.local.get('domains')
     .then((domainList) => {
       startScript(domainList);
   }, onError);
 })();
-
 
 
 function startScript(domainData) {
@@ -14,8 +12,9 @@ function startScript(domainData) {
   let currentURL = location.href;
   let currentHostname = location.hostname;
 
-  if (!domains.includes(currentHostname))
+  if (!domains.includes(currentHostname)) {
     return;
+  }
 
   initialize();
   window.setInterval(function() {
@@ -49,21 +48,24 @@ function initialize() {
 }
 
 
-function addBookmarklet(){
+function addBookmarklet() {
   document.addEventListener('keyup', function(e) {
     let selectionData = getSelectionData();
     if (e.keyCode === 66 && selectionData.text) {
       if (currentBookmarklet !== selectionData.targetElement.id) {
-        let title = (document.getElementsByClassName('graf graf--title')[0] !== undefined)
+        let title =
+          document.getElementsByClassName('graf graf--title')[0] !== undefined
           ? document.getElementsByClassName('graf graf--title')[0].textContent
           : document.querySelector('title').textContent;
-        let author = document.querySelector('a[property="cc:attributionName"]').textContent;
+        let author =
+          document.querySelector('a[property="cc:attributionName"]');
+        author = author.textContent;
 
         let bookmarklet = {
           id: selectionData.targetElement.id,
           url: location.href,
           title: title,
-          author: author
+          author: author,
         };
 
         storeBookmarklet(bookmarklet);
@@ -76,13 +78,15 @@ function addBookmarklet(){
 function removeBookmarkletHighlight(id) {
   let bookmarklet = document.getElementById(id);
   bookmarklet.classList.remove('mb__bookmarklet');
-  bookmarklet.onclick = function() { return false; };
+  bookmarklet.onclick = () => {
+    return false;
+  };
 }
 
 
 function deleteBookmarklet(e) {
   removeBookmarkletHighlight(e.target.id);
-  
+
   let deletingBookmarklet = browser.storage.local.remove(location.href);
   deletingBookmarklet.then(() => {
     displayNotification('deleted');
@@ -105,8 +109,9 @@ function storeBookmarklet(bookmarkletObj) {
 
 function displayBookmarklet(bookmarkletID) {
   let previousBookmarklet = document.querySelector('.mb__bookmarklet');
-  if (previousBookmarklet)
+  if (previousBookmarklet) {
     removeBookmarkletHighlight(previousBookmarklet.id);
+  }
 
   currentBookmarklet = bookmarkletID;
   let bookmarklet = document.getElementById(bookmarkletID);
@@ -123,7 +128,8 @@ function getSelectionData() {
   if (typeof window.getSelection !== 'undefined') {
     selectionObj = window.getSelection();
     text = selectionObj.toString();
-    targetElement = (selectionObj.anchorNode.nodeType === 1) ? selectionObj.anchorNode : selectionObj.anchorNode.parentElement;
+    targetElement = (selectionObj.anchorNode.nodeType === 1)
+      ? selectionObj.anchorNode : selectionObj.anchorNode.parentElement;
   }
 
   if (!targetElement.classList.contains('graf')) {
@@ -131,9 +137,9 @@ function getSelectionData() {
   }
 
   let selectionInfo = {
-    "targetElement": targetElement,
-    "text": text
-  }
+    'targetElement': targetElement,
+    'text': text,
+  };
 
   return selectionInfo;
 }
@@ -144,7 +150,7 @@ function displayNotification(action) {
     notification = document.createElement('div');
     notification.id = 'notification';
     notification.classList.add('mb__hidden');
-    
+
     document.body.appendChild(notification);
   }
 

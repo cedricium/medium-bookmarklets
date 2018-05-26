@@ -1,4 +1,4 @@
-(function () {
+(() => {
   let gettingDomains = browser.storage.local.get('domains');
   gettingDomains.then((storedDomains) => {
     if (Object.keys(storedDomains).length === 0) {

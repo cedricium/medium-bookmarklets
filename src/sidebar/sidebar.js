@@ -1,22 +1,25 @@
-(function() {
-  browser.storage.onChanged.addListener(function (changes, areaName) {
+(() => {
+  browser.storage.onChanged.addListener((changes, areaName) => {
     if (Object.keys(changes).length === 1 && !changes.domains) {
       let url = Object.keys(changes)[0];
       if (changes[url].newValue) {
         findExistingCard(changes[url].newValue);
-      } else if (changes[url].oldValue)
+      } else if (changes[url].oldValue) {
         removeCard(changes[url].oldValue);
+      }
     }
   });
 
-  let bookmarklets = {};
   let gettingBookmarklets = browser.storage.local.get(null);
   gettingBookmarklets.then((data) => {
-    if (Object.keys(data).length === 1)   // 1 key being the domain object; meaning no bookmarklets
+    // 1 key being the domain object; meaning no bookmarklets
+    if (Object.keys(data).length === 1) {
       emptyStateContainer.classList.remove('hidden');
+    }
     for (key in data) {
-      if (key !== 'domains')
+      if (key !== 'domains') {
         createCard(data[key]);
+      }
     }
   }, onError);
 })();
@@ -25,23 +28,22 @@
 let numberOfCards = 0;
 let emptyStateContainer = document.querySelector('div.empty-state');
 
-
 function onError(err) {
   console.error(err);
 }
 
-
 function createCard(obj) {
   numberOfCards++;
-  if (numberOfCards > 0)
+  if (numberOfCards > 0) {
     emptyStateContainer.classList.add('hidden');
+  }
 
-  let url = obj.url,
-      id = obj.id,
-      title = obj.title,
-      author = obj.author;
-  
-  let complete_url = url + '#' + id;
+  let url = obj.url;
+  let id = obj.id;
+  let title = obj.title;
+  let author = obj.author;
+
+  let completeURL = url + '#' + id;
 
   let mainContent = document.querySelector('div.main-content');
 
@@ -53,12 +55,12 @@ function createCard(obj) {
 
   let cardContainer = document.createElement('div');
   cardContainer.classList.add('card-container');
-  cardContainer.dataset.urlRedirect = complete_url;
-  
+  cardContainer.dataset.urlRedirect = completeURL;
+
   cardContainer.innerHTML = `
     <p class="title">${title}</p>
     <p class="author"><em>${author}</em></p>
-    <p class="url">${complete_url}</p>
+    <p class="url">${completeURL}</p>
   `;
 
   card.appendChild(cardContainer);
@@ -71,9 +73,10 @@ function createCard(obj) {
 
 function removeCard(obj) {
   numberOfCards--;
-  if (numberOfCards < 1)
+  if (numberOfCards < 1) {
     emptyStateContainer.classList.remove('hidden');
-  
+  }
+
   let title = obj.title;
 
   let card = document.querySelector(`div.card[data-title="${title}"]`);
@@ -86,28 +89,28 @@ function findExistingCard(obj) {
   let title = obj.title;
   let card = document.querySelector(`div.card[data-title="${title}"]`);
 
-  if (card !== null)
+  if (card !== null) {
     updateCard(obj);
-  else 
+  } else {
     createCard(obj);
+  }
 }
 
 function updateCard(obj) {
-  let url = obj.url,
-      id = obj.id,
-      title = obj.title;
+  let url = obj.url;
+  let id = obj.id;
+  let title = obj.title;
 
-  let cardUrl = document.querySelector(`div.card[data-title="${title}"] div.card-container p.url`);
-  let complete_url = url + '#' + id;
-  cardUrl.textContent = complete_url;
-  cardUrl.parentElement.dataset.urlRedirect = complete_url;
+  let cardUrl = document.querySelector(`div.card[data-title="${title}"] div.card-container p.url`); // eslint-disable-line max-len
+  let completeURL = url + '#' + id;
+  cardUrl.textContent = completeURL;
+  cardUrl.parentElement.dataset.urlRedirect = completeURL;
 }
-
 
 function openBookmarklet(url) {
-  let updating = browser.tabs.update({"url": url});
+  // let updating = browser.tabs.update({"url": url});
+  browser.tabs.update({'url': url});
 }
-
 
 document.querySelector('p.nav').addEventListener('click', setSettingsView);
 function setSettingsView() {
@@ -123,10 +126,10 @@ function setSettingsView() {
   let navbar = document.querySelector('p.nav');
   navbar.innerHTML = `<span class="icon">&#8592;</span> Back to Bookmarklets`;
   navbar.classList.add('settings-nav');
-  
+
   settingsContentDiv.innerHTML = `
   <div class="settings-container">
-  
+
   <div class="notification hidden">
   <p>✓ Settings successfully saved!</p>
   </div>
@@ -156,10 +159,13 @@ function setSettingsView() {
   `;
 
   setPreexistingDomainComponents();
-  
+
   navbar.addEventListener('click', setMainView);
-  document.querySelector('input.addDomain').addEventListener('click', addDomainComponent);
-  document.querySelector('button.button.save').addEventListener('click', saveDomains);
+  document.querySelector('input.addDomain')
+    .addEventListener('click', addDomainComponent);
+
+  document.querySelector('button.button.save')
+    .addEventListener('click', saveDomains);
 }
 
 function setMainView() {
@@ -169,27 +175,29 @@ function setMainView() {
 }
 
 function addDomainComponent() {
-  let settingSection__domain = document.querySelector('div.settings-section.domains');
-  
+  let settingsSectionDomain =
+    document.querySelector('div.settings-section.domains');
+
   let domainDiv = document.createElement('div');
   domainDiv.classList.add('domain-input');
-  domainDiv.innerHTML = `
-  <input type="text" class="string domain" placeholder="e.g. code.likeagirl.io" />
-  <input type="button" class="outline remove" value="✕ Remove" />
-  `;
-  
-  settingSection__domain.appendChild(domainDiv);
-  
+  domainDiv.innerHTML =
+`<input type="text" class="string domain" placeholder="e.g. code.likeagirl.io">
+<input type="button" class="outline remove" value="✕ Remove">`;
+
+  settingsSectionDomain.appendChild(domainDiv);
+
   let removeButtons = document.getElementsByClassName('outline remove');
-  for (let i = 0; i < removeButtons.length; i++)
-  removeButtons[i].addEventListener('click', removeDomainComponent);
+  for (let i = 0; i < removeButtons.length; i++) {
+    removeButtons[i].addEventListener('click', removeDomainComponent);
+  }
 }
 
 function removeDomainComponent(e) {
-  let settingSection__domain = document.querySelector('div.settings-section.domains');
+  let settingsSectionDomain =
+    document.querySelector('div.settings-section.domains');
   let domainComponent = e.target.parentElement;
-  
-  settingSection__domain.removeChild(domainComponent);
+
+  settingsSectionDomain.removeChild(domainComponent);
 }
 
 function setPreexistingDomainComponents() {
@@ -198,7 +206,8 @@ function setPreexistingDomainComponents() {
     if (data.domains.length > 0) {
       for (let i = 0; i < data.domains.length; i++) {
         addDomainComponent();
-        let domainComponentsInput = document.getElementsByClassName('string domain');
+        let domainComponentsInput =
+          document.getElementsByClassName('string domain');
         domainComponentsInput[i].value = data.domains[i];
       }
     }
